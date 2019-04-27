@@ -1,0 +1,4 @@
+DB_USER = 'someone'
+DB_PASSWORD = ''
+DB_HOST = 'localhost'
+DB_ENGINE = 'pg'

@@ -1,0 +1,19 @@
+{% extends 'base.html.jinja2' %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<h3>{{ book['name'] }}</h3>
+  <table>
+  <tr>
+    <th>Payload</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+  </tr>
+  <tr>
+    <td><pre>{{ book['pretty_payload'] }}</pre></td>
+    <td>{{ book['created_at'] }}</td>
+    <td>{{ book['updated_at'] }}</td>
+  </tr>
+  </table>
+{% endblock %}

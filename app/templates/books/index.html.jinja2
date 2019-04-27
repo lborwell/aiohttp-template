@@ -1,0 +1,26 @@
+{% extends 'base.html.jinja2' %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>ISBN</th>
+      <th>Created at</th>
+    </tr>
+    </thead>
+    {% for book in books %}
+      <tr>
+        <td><a href="{{ url('bff_web_book_show', book_id=book['id']) }}"><pre>{{ book['id'] }}</pre></a></td>
+        <td>{{ book['name'] }}</td>
+        <td>{{ book['author'] }}</td>
+        <td>{{ book['isbn'] }}</td>
+        <td>{{ book['created_at'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

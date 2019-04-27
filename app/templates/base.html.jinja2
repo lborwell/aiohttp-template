@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% block head %}
+    <title>todo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% endblock %}
+</head>
+<div class="container-fluid">
+  <table style="padding:0; margin:0; border-collapse: collapse;">
+    <tr>
+      <td style="vertical-align:top; background-color: #eaeaea;">
+        <div style="padding: 5px;">
+          <div>
+            <a href="{{ url('bff_web_index') }}">Home</a>
+          </div>
+          <h3>Books</h3>
+          <div>
+            <a href="{{ url('bff_web_book_index') }}">Books</a><br>
+          </div>
+        </div>
+      </td>
+      <td style="vertical-align:top; width: 85%; padding: 20px;">
+        {% block content %}{% endblock %}
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
